@@ -1,0 +1,30 @@
+var counther = 0;
+var check = false;
+var age = prompt("Please enter your age!");
+
+while (counther <= 0) {
+  if (age <= 0) {
+    document.write("Your age can't be that low.<br/>");
+  } else if (age <= 14) {
+    document.write("You are a minor.<br/>");
+  } else if (age <= 18) {
+    document.write("You are a teenager.<br/>");
+  } else if (age <= 30) {
+    document.write("You are a young-adult.<br/>");
+  } else if (age <= 60) {
+    document.write("You are a middle-aged person.<br/>");
+  } else if (age <= 122) {
+    document.write("You are an elder.<br/>");
+  } else if (age > 122) {
+    document.write("You are either lying about your age, or you are in the Guinness World Records.<br/>");
+  } else {
+    document.write("Wrong input.<br/>");
+    check = true;
+  }
+  counther = counther + 1;
+}
+if (check == true){
+document.write(" I can't determine your age due to your wrong input, please try again!");
+}else{
+document.write(" You are " + age + " years old.");
+}
